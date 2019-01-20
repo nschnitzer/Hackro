@@ -1,4 +1,4 @@
-var buffer = [];
+/* var buffer = [];
 
 onStart = function() {
     buffer = [];
@@ -10,4 +10,5 @@ onStart = function() {
 onEnd = function() {
     document.onkeypress = function(e) {}
     return buffer;
-}
+} */
+//Math.floor(Math.random() * 100) + 1;
