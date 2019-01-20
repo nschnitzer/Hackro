@@ -51,7 +51,7 @@ public class MacroRecorder extends JFrame implements KeyListener, ActionListener
 		label.setFocusTraversalKeysEnabled(false);
 	}
 
-	public static void main(String[] args) {
+	public static void main(String... args) {
 		new MacroRecorder();
 	}
 

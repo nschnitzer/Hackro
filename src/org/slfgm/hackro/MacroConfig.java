@@ -65,7 +65,7 @@ public class MacroConfig extends JFrame implements NativeKeyListener, WindowList
 		return index==JOptionPane.CLOSED_OPTION ? null : files[index];
 	}
 
-	public static void main(String[] args) {
+	public static void main(String... args) {
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
 				new MacroConfig();
