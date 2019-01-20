@@ -1,5 +1,6 @@
 package org.slfgm.hackro;
 
+import java.awt.Font;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.File;
@@ -45,8 +46,10 @@ public class MacroConfig extends JFrame implements NativeKeyListener, WindowList
 		
 		addWindowListener(this);
 		
-		add(new JLabel("Press a key on the macro keypad..."));
-		pack();
+		JLabel label = new JLabel("Press a key on the macro keypad...");
+		label.setFont(new Font("Calibri", 0, 36));
+		add(label);
+		setSize(700, 300);
 		
 		disableMacro();
 		setVisible(true);
@@ -147,7 +150,7 @@ public class MacroConfig extends JFrame implements NativeKeyListener, WindowList
 			return;
 		}
 		if(hasBindForKey(key)) {
-			bindStr.replaceFirst("\n"+key+";.+\n", "\n");
+			bindStr = bindStr.replaceAll("\n"+key+";.+", "");
 		}
 		if(!bindStr.isEmpty())
 			bindStr += "\n";
